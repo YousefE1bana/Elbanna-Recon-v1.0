@@ -1167,27 +1167,6 @@ We welcome suggestions for new reconnaissance tools and features! Please provide
 
 ---
 
-## 🎓 Educational Resources
-
-### Learning Cybersecurity
-
-Elbanna Recon v1.0 is designed as a learning tool. Here are recommended resources:
-
-**Books**:
-- "The Web Application Hacker's Handbook" by Dafydd Stuttard
-- "Penetration Testing: A Hands-On Introduction to Hacking" by Georgia Weidman
-- "Black Hat Python" by Justin Seitz
-
-**Online Courses**:
-- OSCP (Offensive Security Certified Professional)
-- CEH (Certified Ethical Hacker)
-- CISSP (Certified Information Systems Security Professional)
-
-**Practice Platforms**:
-- HackTheBox
-- TryHackMe
-- VulnHub
-- OverTheWire
 
 ### Using This Tool for Learning
 
