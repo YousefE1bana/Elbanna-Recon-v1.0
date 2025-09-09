@@ -444,8 +444,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 - **Author:** Yousef Osama
 - **Institution:** Egyptian Chinese University - Cybersecurity Engineering
-- **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **GitHub:** [github.com/yourusername](https://github.com/yourusername)
+- **Email:** (y3usef.osama@gmail.com)
+- **GitHub:** (https://github.com/YousefE1bana)
 
 ### Educational Purpose Statement
 
