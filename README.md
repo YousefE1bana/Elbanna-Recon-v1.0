@@ -13,9 +13,13 @@
 
 **Elbanna Recon v1.0** is a comprehensive cybersecurity reconnaissance toolkit designed for **educational purposes** and **ethical hacking** scenarios. This modular CLI application provides a wide range of information gathering and security analysis tools in a professional, easy-to-use interface.
 
-**Author:** Yousef Osama - Cybersecurity Engineering, Egyptian Chinese University  
+**Author:** Yousef Osama (@YousefE1bana)  
+**University:** Egyptian Chinese University - Cybersecurity Engineering  
+**Contact:** y3usef.osama@gmail.com  
+**LinkedIn:** [www.linkedin.com/in/yousefelbana](https://www.linkedin.com/in/yousefelbana)  
+**GitHub:** [github.com/YousefE1bana](https://github.com/YousefE1bana)  
 **Version:** 1.0  
-**Last Updated:** September 8, 2025
+**Last Updated:** September 9, 2025
 
 ---
 
@@ -477,6 +481,25 @@ This tool was developed as part of cybersecurity education and training. It demo
 If you find this tool useful, please consider giving it a star on GitHub! ⭐
 
 Your support helps us continue developing and improving this educational cybersecurity toolkit.
+
+---
+
+## 👨‍💻 **About the Author**
+
+**Yousef Osama** is a Cybersecurity Engineering student at Egyptian Chinese University, passionate about ethical hacking, penetration testing, and cybersecurity education. This project represents his commitment to making cybersecurity knowledge more accessible to students and professionals worldwide.
+
+### Connect with me:
+- 🎓 **University:** Egyptian Chinese University - Cybersecurity Engineering
+- 💼 **LinkedIn:** [www.linkedin.com/in/yousefelbana](https://www.linkedin.com/in/yousefelbana)
+- 🐙 **GitHub:** [github.com/YousefE1bana](https://github.com/YousefE1bana)
+- 📧 **Email:** y3usef.osama@gmail.com
+
+### Interests:
+- 🛡️ Ethical Hacking & Penetration Testing
+- 🔍 Digital Forensics & Incident Response
+- 🌐 Network Security & Analysis
+- 🎓 Cybersecurity Education & Training
+- 🛠️ Security Tool Development
 
 ---
 
