@@ -1,0 +1,115 @@
+# Elbanna Recon v1.0 - Git Ignore File
+# Author: Yousef Osama - Cybersecurity Engineering, Egyptian Chinese University
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/*.log
+*.log
+
+# Reports (except sample)
+reports/*.json
+reports/*.txt
+reports/*.html
+reports/*.csv
+!reports/results.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# API Keys and sensitive data
+config_local.yaml
+*.key
+*.pem
+*.p12
+.env.local
+
+# Output directories
+output/
+temp/
+tmp/
+
+# Test coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Windows
+*.lnk
+*.exe
+*.msi
+
+# Wordlists (user-specific)
+wordlists/custom_*
+wordlists/private_*

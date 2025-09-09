@@ -1,0 +1,308 @@
+# Elbanna Recon v1.0 - Configuration File
+# Author: Yousef Osama - Cybersecurity Engineering, Egyptian Chinese University
+# Last Updated: September 8, 2025
+
+# =============================================================================
+# APPLICATION SETTINGS
+# =============================================================================
+app:
+  name: "Elbanna Recon"
+  version: "1.0"
+  author: "Yousef Osama"
+  university: "Egyptian Chinese University"
+  banner_enabled: true
+  colored_output: true
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# =============================================================================
+# DEFAULT SETTINGS
+# =============================================================================
+defaults:
+  # Network timeouts (in seconds)
+  timeout: 10
+  connection_timeout: 5
+  read_timeout: 30
+  
+  # Threading and performance
+  threads: 20
+  max_threads: 100
+  concurrent_requests: 10
+  
+  # Output and reporting
+  save_format: "json"  # json, txt, html, csv
+  reports_directory: "reports"
+  logs_directory: "logs"
+  auto_save_results: true
+  
+  # Port scanning defaults
+  port_range: "1-1000"
+  scan_type: "tcp"  # tcp, udp, syn
+  
+  # DNS lookup defaults
+  dns_servers:
+    - "8.8.8.8"      # Google DNS
+    - "8.8.4.4"      # Google DNS Secondary
+    - "1.1.1.1"      # Cloudflare DNS
+    - "9.9.9.9"      # Quad9 DNS
+  
+  dns_record_types:
+    - "A"
+    - "AAAA"
+    - "MX"
+    - "TXT"
+    - "NS"
+    - "CNAME"
+  
+  # User agent for web requests
+  user_agent: "Elbanna-Recon-v1.0-Scanner"
+  
+  # Rate limiting
+  request_delay: 0.1  # seconds between requests
+  max_retries: 3
+  backoff_factor: 1.5
+
+# =============================================================================
+# API KEYS AND EXTERNAL SERVICES
+# =============================================================================
+api_keys:
+  # VirusTotal API for URL/file scanning
+  virustotal:
+    api_key: "YOUR_VIRUSTOTAL_API_KEY_HERE"
+    enabled: false
+    rate_limit: 4  # requests per minute for free tier
+  
+  # GitHub API for repository reconnaissance
+  github:
+    api_key: "YOUR_GITHUB_TOKEN_HERE"
+    enabled: false
+    rate_limit: 60  # requests per hour for unauthenticated
+  
+  # YouTube Data API v3 for video/channel analysis
+  youtube:
+    api_key: "YOUR_YOUTUBE_DATA_API_KEY_HERE"
+    enabled: false
+    rate_limit: 100  # requests per day for free tier
+  
+  # Shodan API for device/service discovery
+  shodan:
+    api_key: "YOUR_SHODAN_API_KEY_HERE"
+    enabled: false
+    rate_limit: 100  # requests per month for free tier
+  
+  # Censys API for internet-wide scanning data
+  censys:
+    api_id: "YOUR_CENSYS_API_ID_HERE"
+    api_secret: "YOUR_CENSYS_API_SECRET_HERE"
+    enabled: false
+    rate_limit: 0.2  # requests per second for free tier
+  
+  # Have I Been Pwned API for breach data
+  hibp:
+    api_key: "YOUR_HIBP_API_KEY_HERE"
+    enabled: false
+    rate_limit: 1.5  # seconds between requests
+
+# =============================================================================
+# TOOL-SPECIFIC CONFIGURATIONS
+# =============================================================================
+tools:
+  # Port Scanner Configuration
+  port_scanner:
+    default_ports: [21, 22, 23, 25, 53, 80, 110, 135, 139, 143, 443, 993, 995, 1433, 1521, 3306, 3389, 5432, 5900, 8080]
+    common_ports: "1-1024"
+    all_ports: "1-65535"
+    socket_timeout: 3
+    max_connections: 100
+  
+  # Packet Sniffer Configuration
+  packet_sniffer:
+    default_interface: "auto"  # auto-detect or specify interface name
+    capture_filter: ""  # BPF filter expression
+    max_packets: 100
+    packet_timeout: 30
+    promiscuous_mode: true
+  
+  # Password Cracker Configuration
+  password_cracker:
+    default_wordlist: "Tools/Password_Cracker/sample_wordlist.txt"
+    hash_algorithms: ["md5", "sha1", "sha256", "sha512", "bcrypt"]
+    max_workers: 4
+    chunk_size: 1000
+  
+  # Steganography Tool Configuration
+  steganography:
+    supported_formats: ["png", "jpg", "jpeg", "bmp", "gif"]
+    output_directory: "Output/steganography"
+    compression_level: 6
+  
+  # Subdomain Scanner Configuration
+  subdomain_scanner:
+    default_wordlist: "subdomains.txt"
+    dns_timeout: 5
+    max_subdomains: 1000
+    verify_ssl: false
+  
+  # Web Analysis Configuration
+  web_analysis:
+    follow_redirects: true
+    max_redirects: 10
+    verify_ssl_certificates: false
+    custom_headers: {}
+    cookie_jar: true
+
+# =============================================================================
+# LOGGING CONFIGURATION
+# =============================================================================
+logging:
+  enabled: true
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: true
+  max_file_size: "10MB"
+  backup_count: 5
+  
+  # Log files
+  files:
+    main_log: "logs/elbanna_recon.log"
+    error_log: "logs/errors.log"
+    audit_log: "logs/audit.log"
+  
+  # What to log
+  log_all_requests: false
+  log_successful_operations: true
+  log_failed_operations: true
+  log_user_inputs: false  # Security: avoid logging sensitive inputs
+
+# =============================================================================
+# SECURITY AND PRIVACY SETTINGS
+# =============================================================================
+security:
+  # Rate limiting to avoid being blocked
+  respect_robots_txt: true
+  user_agent_rotation: false
+  proxy_rotation: false
+  
+  # Data handling
+  store_sensitive_data: false
+  encrypt_stored_data: false
+  auto_cleanup_temp_files: true
+  
+  # Network security
+  verify_ssl_certificates: true
+  allow_insecure_connections: false
+  max_response_size: "50MB"
+  
+  # Scanning ethics
+  max_scan_rate: 10  # requests per second
+  respect_http_status_codes: [429, 503]  # back off on these codes
+  blacklisted_targets: []  # domains/IPs to never scan
+
+# =============================================================================
+# OUTPUT AND REPORTING CONFIGURATION
+# =============================================================================
+output:
+  # Console output
+  colored_output: true
+  progress_bars: true
+  verbose_mode: false
+  quiet_mode: false
+  
+  # Report generation
+  auto_generate_reports: true
+  report_formats: ["json", "txt"]
+  include_timestamps: true
+  include_metadata: true
+  
+  # File naming
+  timestamp_format: "%Y%m%d_%H%M%S"
+  filename_template: "elbanna_recon_{tool}_{target}_{timestamp}"
+  
+  # Export options
+  export_csv: false
+  export_xml: false
+  export_pdf: false
+
+# =============================================================================
+# DEVELOPMENT AND DEBUG SETTINGS
+# =============================================================================
+development:
+  debug_mode: false
+  verbose_logging: false
+  performance_monitoring: false
+  memory_profiling: false
+  
+  # Testing
+  mock_external_apis: false
+  simulate_network_delays: false
+  test_mode: false
+  
+  # Advanced features
+  enable_experimental_features: false
+  allow_unsafe_operations: false
+  bypass_safety_checks: false
+
+# =============================================================================
+# WORDLISTS AND RESOURCES
+# =============================================================================
+wordlists:
+  # Default wordlists for different tools
+  subdomains: "wordlists/subdomains.txt"
+  directories: "wordlists/directories.txt"
+  usernames: "wordlists/usernames.txt"
+  passwords: "wordlists/passwords.txt"
+  
+  # Online wordlist sources (for updates)
+  update_sources:
+    subdomains: "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/subdomains-top1million-5000.txt"
+    directories: "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt"
+
+# =============================================================================
+# NOTIFICATION SETTINGS
+# =============================================================================
+notifications:
+  enabled: false
+  
+  # Email notifications
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: "your_email@gmail.com"
+    password: "your_app_password"
+    recipient: "your_email@gmail.com"
+  
+  # Discord webhook
+  discord:
+    enabled: false
+    webhook_url: "YOUR_DISCORD_WEBHOOK_URL"
+  
+  # Slack webhook
+  slack:
+    enabled: false
+    webhook_url: "YOUR_SLACK_WEBHOOK_URL"
+
+# =============================================================================
+# NOTES AND INSTRUCTIONS
+# =============================================================================
+# 
+# HOW TO USE THIS CONFIG:
+# 1. Copy this file to 'config.yaml' in your project root
+# 2. Update API keys with your actual keys
+# 3. Modify default settings as needed
+# 4. Enable/disable features based on your requirements
+# 
+# API KEY SETUP:
+# - VirusTotal: https://www.virustotal.com/gui/my-apikey
+# - GitHub: https://github.com/settings/tokens
+# - YouTube: https://console.developers.google.com/
+# - Shodan: https://account.shodan.io/
+# - Censys: https://censys.io/api
+# 
+# SECURITY REMINDER:
+# - Never commit API keys to version control
+# - Use environment variables for sensitive data
+# - Regularly rotate your API keys
+# - Follow responsible disclosure practices
+# - Only scan targets you own or have permission to test
+# 
+# =============================================================================

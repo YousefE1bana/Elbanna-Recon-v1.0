@@ -1,0 +1,42 @@
+# Elbanna Recon v1.0 - Python Dependencies
+# Author: Yousef Osama - Cybersecurity Engineering, Egyptian Chinese University
+# Last Updated: September 8, 2025
+
+# Core HTTP and Network Libraries
+requests>=2.31.0          # HTTP requests for API calls and web scraping
+scapy>=2.5.0             # Network packet capture and analysis
+dnspython>=2.4.0         # DNS lookup and record parsing
+
+# WHOIS and Domain Analysis
+python-whois>=0.8.0      # WHOIS domain information lookup
+
+# Image and File Analysis
+exifread>=3.0.0          # EXIF metadata extraction from images
+pillow>=10.0.0           # Image processing and manipulation
+
+# CLI Enhancement and Output
+colorama>=0.4.6          # Cross-platform colored terminal output
+pyfiglet>=0.8.0          # ASCII art text generation for banners
+art>=6.0                 # Additional ASCII art capabilities
+
+# Web and User Agent
+user-agents>=2.2.0       # User agent parsing and analysis
+
+# Optional: Enhanced functionality (uncomment if needed)
+# beautifulsoup4>=4.12.0   # HTML parsing for web scraping
+# selenium>=4.15.0         # Web browser automation
+# nmap>=1.0.0             # Nmap integration (requires nmap binary)
+# shodan>=1.29.0          # Shodan API integration
+# censys>=2.2.0           # Censys API integration
+# virustotal-api>=1.1.11  # VirusTotal API integration
+
+# Development and Testing (for contributors)
+# pytest>=7.4.0          # Testing framework
+# black>=23.0.0           # Code formatting
+# flake8>=6.0.0           # Code linting
+# mypy>=1.5.0             # Type checking
+
+# Note: Some tools may require additional system dependencies:
+# - Scapy may need WinPcap/Npcap on Windows or libpcap on Linux
+# - Some modules may require elevated privileges for network operations
+# - Ensure you have permission to use these tools in your environment
