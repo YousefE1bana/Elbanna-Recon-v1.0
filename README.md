@@ -94,7 +94,7 @@ This tool is intended for **EDUCATIONAL PURPOSES ONLY** and **AUTHORIZED SECURIT
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/elbanna-recon.git
+   git clone https://github.com/YousefE1bana/elbanna-recon.git
    cd elbanna-recon
    ```
 
